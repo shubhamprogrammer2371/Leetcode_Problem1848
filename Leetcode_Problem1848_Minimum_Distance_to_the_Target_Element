@@ -1,0 +1,9 @@
+int getMinDistance(int* nums, int numsSize, int target, int start){
+    int dist = INT_MAX;
+    for( int i = 0 ; i < numsSize ; i++)
+    {
+        if(nums[i] == target && abs(i - start) < dist)
+            dist = abs(i - start);
+    }
+    return dist;
+}
